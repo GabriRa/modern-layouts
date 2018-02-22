@@ -1,4 +1,4 @@
-
+*{box-sizing: border-box;}
 .cannon-main-page{
     background: #407afc linear-gradient(45deg,rgba(0,0,0,0),#429cfc);
     font-family: Muli,Helvetica,Arial,sans-serif;
@@ -11,8 +11,8 @@
     /*Barra navegadora*/
 
 .nav-cannon{
-    width: calc(100% - 2rem);
-    height: calc(60px - 2rem);
+    width: 100%;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -26,14 +26,21 @@
     }
     .nav-content-container-1{
         justify-content: flex-start;
-        cursor: pointer;
+        /*cursor: pointer;*/
+        text-align: center; text-transform: uppercase;
+        font-weight: bold;
+        color:purple;
     }
+        .logo-name{
+            cursor: pointer;
+        } 
+
     .nav-content-container-2{
         width: 40%;
     }
             .nav-link-container>a{
                 color: #ccc;
-                text-decoration: none;
+                text-decoration: none; text-transform: capitalize;
                 transition: color .3s ease;
             }
             .nav-link-container>a:hover{
@@ -43,6 +50,7 @@
                 padding: .5rem 1rem;
                 border-radius: 5px;
                 transition: all .2s ease;
+                cursor: pointer;
             }
             .user-container-2{
                 border: 1px solid white;
@@ -142,7 +150,7 @@
         max-width: 900px;
         height: 500px;
         background-color: #999;
-        box-shadow: 0 10px 50px 0 rgba(0,20,180,.1);
+        box-shadow: 0 10px 50px 10px rgba(0,20,180,.3);
         z-index: 1;
     }
 
@@ -461,22 +469,17 @@
         /*Third section*/
 .third-section{
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: flex; align-items: center; flex-flow: column;
 }
     .container-opinion{
-        height: 500px;
+        height: 500px; width: 100%; 
         background-color: #eee;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
+        display: flex; flex-flow: column; align-items: center; justify-content: center;
     }
         .opinion-box{
             padding: 1rem 0;
-            min-height: 250px;
-            height: fit-content;
-            width: 90%;
+            min-height: 250px; height: fit-content;
+            width: 90%; max-width: 960px;
             box-shadow: 0 0px 50px 0 rgba(0,20,180,.1);
             background-color: white;
             display: flex;
@@ -528,6 +531,37 @@
                 width: 90%;
             }
 
+        .join-container{
+            width: 100%;
+            background-color: #364261;
+            padding: 3rem;
+            display: flex; flex-flow: column; align-items: center;
+            font-weight: bold;
+            text-align: center;
+            color:#eee;
+        }
+            .join-title{
+                font-size: 35px;
+                max-width: 900px;
+                margin: 1rem 0;
+            }
+            .join-button{
+                width: 300px;
+                padding: 1rem 3rem;
+                margin: 1rem 0;
+                background-color: #407afc;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border-radius: 5px;
+                box-shadow: 0px 5px 20px 0 rgba(0, 0, 0 ,.2);
+                cursor: pointer;
+                transition: all .3s ease;
+            }
+            .join-button:hover{
+                color: #407afc;
+                background-color: #fff;
+            }
+
 @media (max-width: 1000px){
 .nav-responsive-container, .nav-responsive-button{
     display: flex;
@@ -546,8 +580,12 @@
         max-width: 600px;
         text-align: center;
     }
-    .characteristic-product-2>.product-information{
+    .characteristic-product-2>.product-information, .characteristic-product-4>.product-information{
         order: unset;
+    }
+    .characteristic-product-3>.product-options>.screen-transformed{
+        width: 270px;
+        height: 260px;
     }
 }
 
