@@ -47,7 +47,6 @@ export default class Rmotr extends React.Component{
                 </div>
 
             </section>
-
         )
     }
 }   

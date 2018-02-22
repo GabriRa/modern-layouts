@@ -1,11 +1,11 @@
 const webpack = require("webpack");
 
 module.exports = {
-    // entry: __dirname + "/src/index.js",
-    entry: [
-        'webpack-hot-middleware/client',
-        './src/index'
-    ],
+    entry: __dirname + "/src/index.js",
+    // entry: [
+    //     'webpack-hot-middleware/client',
+    //     '/src/index'
+    // ],
     devServer: {
         contentBase: __dirname + "/public",
         hot: true,

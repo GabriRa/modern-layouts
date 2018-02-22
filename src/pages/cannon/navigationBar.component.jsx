@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 
-export default function NavigationBar(){
+const  NavigationBar = () => {
 
     var navLinks = ["features", "pricing", "about"],
         userLinks = ["log in", "sing up"],
@@ -28,7 +28,7 @@ export default function NavigationBar(){
 
             <div className="nav-content-container nav-content-container-3">
                 { userLinks.map( (link, index) => 
-                    <div className={`user-container user-container-${index+1}`}>{Link}</div>
+                    <div className={`user-container user-container-${index+1}`}>{link}</div>
                 )}
             </div>
 
@@ -53,3 +53,5 @@ export default function NavigationBar(){
         </div>
     )
 }
+
+export default NavigationBar;
